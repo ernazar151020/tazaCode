@@ -17,7 +17,7 @@ const NewsDetail = () => {
 		const findById = newsData.find((item) => item.id === Number(query.newsId))
 
 		setNewsDetail({...findById})
-	}, [query.newsId])
+	}, [])
 
 
 	return <Layout>

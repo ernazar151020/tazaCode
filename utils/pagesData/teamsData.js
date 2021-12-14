@@ -9,7 +9,7 @@ export const teamsData = [
 		stacks:["python, django"],
 		social_media:
 			{
-				linkedin:"",
+				linkedin:"https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=times",
 				github:"",
 				email:"",
 			}
@@ -22,7 +22,7 @@ export const teamsData = [
 		stacks:["python, django"],
 		social_media:
 			{
-				linkedin:"",
+				linkedin:"https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=times",
 				github:"",
 				email:"",
 			}
@@ -34,7 +34,7 @@ export const teamsData = [
 		stacks:["python, django"],
 		social_media:
 			{
-				linkedin:"",
+				linkedin:"https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=times",
 				github:"",
 				email:"",
 			}
@@ -46,7 +46,7 @@ export const teamsData = [
 		stacks:["python, django"],
 		social_media:
 			{
-				linkedin:"",
+				linkedin:"https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=times",
 				github:"",
 				email:"",
 			}
@@ -58,7 +58,7 @@ export const teamsData = [
 		stacks:["python, django"],
 		social_media:
 			{
-				linkedin:"",
+				linkedin:"https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=times",
 				github:"",
 				email:"",
 			}
@@ -70,7 +70,7 @@ export const teamsData = [
 		stacks:["python, django"],
 		social_media:
 			{
-				linkedin:"",
+				linkedin:"https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=times",
 				github:"",
 				email:"",
 			}

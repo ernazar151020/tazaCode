@@ -2,7 +2,7 @@ import styled from "styled-components"
 import {useGlobalContext} from "../../context/Context";
 import Image from "next/image"
 import {faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons';
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import {faEnvelope , faTimes} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const Modal = () => {
@@ -10,9 +10,13 @@ const Modal = () => {
 	const {modalIsOpen, modalContent: item, handleOpenModal, setModalIsOpen} = useGlobalContext()
 
 
-	return <Wrapper onClick={(e) => handleOpenModal(e)}>
+	return <Wrapper >
 		<div className={`modal ${modalIsOpen}`}>
+
 			<div className="modal_content" onClick={() => setModalIsOpen("open-modal")}>
+				<div className = "closing_icon" onClick={(e) => handleOpenModal(e)}>
+					<FontAwesomeIcon icon={faTimes}/>
+				</div>
 				<div className="image">
 					{
 						item?.image && <Image src={item.image}/>
@@ -36,19 +40,19 @@ const Modal = () => {
 				</div>
 				<div className="social_media">
 					<div className="social_icon">
-						<a href={item?.social_media?.linkedin} target={"_blank"}>
+						<a href={item?.social_media?.linkedin} rel="noopener noreferrer">
 							<FontAwesomeIcon icon={faLinkedin}/>
 						</a>
 
 					</div>
 					<div className="social_icon">
-						<a href={item?.social_media?.github} target={"_blank"}>
+						<a href={item?.social_media?.github} rel="noopener noreferrer">
 							<FontAwesomeIcon icon={faGithubSquare}/>
 						</a>
 
 					</div>
 					<div className="social_icon">
-						<a href={item?.social_media?.email} target={"_blank"}>
+						<a href={item?.social_media?.email} rel="noopener noreferrer">
 							<FontAwesomeIcon icon={faEnvelope}/>
 						</a>
 
@@ -82,6 +86,18 @@ const Wrapper = styled.div`
     justify-content: center;
 
   }
+  
+  .closing_icon{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    color: red;
+    font-size: 30px;
+    line-height: 0;
+    cursor: pointer;
+    background: #000;
+    padding: 7px;
+  }
 
   .modal_content {
     background: #fff;
@@ -92,6 +108,7 @@ const Wrapper = styled.div`
     text-transform: uppercase;
     border: 2px solid red;
     transition: all 0.3s ease;
+    position: relative;
 
   }
 
