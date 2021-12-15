@@ -1,26 +1,23 @@
 import styled from "styled-components"
 import Logo from "../../assets/logo.svg"
-import Bg from "../../assets/header-background.png"
+import Background from "../../assets/header-background.png"
 import SearchInput from "./SearchInput";
 import Image from "next/image"
-import Link from "next/Link"
+import Link from "next/link"
 import {headerLinksData} from "./HeaderLinksData";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faChevronLeft, faChevronRight, faWindowMinimize, faBars} from '@fortawesome/free-solid-svg-icons'
 import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
 import NavbarBurger from "../NavbarBurger";
-import SideBar from "../SideBar/SideBar";
-import {useGlobalContext} from "../../context/Context";
 
 
-const Header = () => {
+
+const HeaderNavbar = () => {
 	const [hideHeaderBg, sethHideHeaderBg] = useState(true)
 
-	const [isOpen, setIsOpen] = useState("")
 	const query = useRouter()
 	const router = useRouter()
-	const {handleClick} = useGlobalContext()
 
 	useEffect(() => {
 		if (query.pathname === "/") {
@@ -53,7 +50,7 @@ const Header = () => {
 			<HeaderLinks>
 				{
 					hideHeaderBg && <div className="background">
-						<Image src={Bg} alt="" layout={"fill"} objectFit={"cover"}/>
+						<Image src={Background} alt="" layout={"fill"} objectFit={"cover"}/>
 					</div>
 				}
 
@@ -77,7 +74,7 @@ const Header = () => {
 	</Wrapper>
 }
 
-export default Header
+export default HeaderNavbar
 
 
 const SingleHeaderLink = ({item}) => {

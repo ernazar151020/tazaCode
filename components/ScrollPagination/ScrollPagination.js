@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller} from 'react-scroll'
+import {Link as LinkS} from 'react-scroll'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCircle} from '@fortawesome/free-solid-svg-icons'
@@ -8,57 +8,57 @@ const ScrollPagination = () => {
 	return <Wrapper>
 		<ul>
 			<li>
-				<Link activeClass="active" className="home" to="home" spy={true} smooth={true} duration={500}
+				<LinkS activeClass="active" className="home" to="home" spy={true} smooth={true} duration={500}
 				      exact={"true"} offset={-100}>
 					<div className="dot">
 
 					</div>
-				</Link>
+				</LinkS>
 			</li>
 			<li>
-				<Link activeClass="active" className="home" to="services" spy={true} smooth={true} duration={500}
+				<LinkS activeClass="active" className="home" to="services" spy={true} smooth={true} duration={500}
 				      offset={-230}
 				      exact={"true"}>
 					<div className="dot">
 
 					</div>
-				</Link>
+				</LinkS>
 			</li>
 			<li>
-				<Link activeClass="active" className="home" to="projects" spy={true} smooth={true} duration={500}
+				<LinkS activeClass="active" className="home" to="projects" spy={true} smooth={true} duration={500}
 				      offset={-200}
 				      exact={"true"}>
 					<div className="dot">
 
 					</div>
-				</Link>
+				</LinkS>
 			</li>
 			<li>
-				<Link activeClass="active" className="home" to="about-us" spy={true} smooth={true} duration={500}
+				<LinkS activeClass="active" className="home" to="about-us" spy={true} smooth={true} duration={500}
 				      offset={-200}
 				      exact={"true"}>
 					<div className="dot">
 
 					</div>
-				</Link>
+				</LinkS>
 			</li>
 			<li>
-				<Link activeClass="active" className="home" to="news" spy={true} smooth={true} duration={500}
+				<LinkS activeClass="active" className="home" to="news" spy={true} smooth={true} duration={500}
 				      offset={-200}
 				      exact={"true"}>
 					<div className="dot">
 
 					</div>
-				</Link>
+				</LinkS>
 			</li>
 			<li>
-				<Link activeClass="active" className="home" to="team" spy={true} smooth={true} duration={500}
+				<LinkS activeClass="active" className="home" to="team" spy={true} smooth={true} duration={500}
 				      offset={-200}
 				      exact={"true"}>
 					<div className="dot">
 
 					</div>
-				</Link>
+				</LinkS>
 			</li>
 
 		</ul>

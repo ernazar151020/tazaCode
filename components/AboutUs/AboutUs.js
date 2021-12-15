@@ -2,6 +2,8 @@ import styled from "styled-components"
 import Image from "next/image";
 import Bg from "../../assets/about-us-bg.svg";
 import Link from "next/link"
+
+
 const AboutUs = () => {
 	return <Wrapper id={"about-us"} name={"about-us"}>
 		<div className="container">

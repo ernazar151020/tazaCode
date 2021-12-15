@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Header from "../Header/Header";
+import HeaderNavbar from "../Header/HeaderNavbar";
 import Footer from "../Footer/Footer";
 import SideBar from "../SideBar/SideBar";
 import Modal from "../CustomModal/CustomModal";
@@ -15,7 +15,7 @@ const Layout = ({children}) => {
 		<Wrapper>
 			<Modal/>
 			<SideBar/>
-			<Header/>
+			<HeaderNavbar/>
 			{children}
 			<Footer/>
 		</Wrapper>

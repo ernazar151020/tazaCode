@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import {useState} from "react";
 import {headerLinksData} from "../Header/HeaderLinksData";
-import Link from "next/Link"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronLeft, faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import {useGlobalContext} from "../../context/Context";
