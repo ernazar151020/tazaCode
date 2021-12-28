@@ -1,38 +1,49 @@
 import styled from "styled-components"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFacebookF, faInstagram, faTelegram, faTwitter, faWhatsapp} from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
+
+
+const social_media_data = [
+	// {
+	// 	phone_link:"",
+	// 	icon:faFacebookF
+	// },
+	{
+		phone_link:"https://www.instagram.com/smartpost.kg/?hl=ru",
+		icon:faInstagram
+	},{
+		phone_link:"https://wa.me/+996997948888",
+		icon:faWhatsapp
+	},
+	// {
+	// 	phone_link:"",
+	// 	icon:faTwitter
+	// }
+	// ,
+	{
+		phone_link:"tg://resolve?domain=tazacode",
+		icon:faTelegram
+	},
+]
 
 const Share = () => {
 	return <Wrapper>
 		<div className="social_icons">
 			<h3>follow us : </h3>
 			<div className="social_icons_inner">
-				<div className="social_icon">
-					<a href="#">
-						<FontAwesomeIcon icon={faFacebookF}/>
-					</a>
-				</div>
-				<div className="social_icon">
-					<a href="#">
-						<FontAwesomeIcon icon={faInstagram}/>
-					</a>
-				</div>
-				<div className="social_icon">
-					<a href="#">
-						<FontAwesomeIcon icon={faWhatsapp}/>
-					</a>
-				</div>
-				<div className="social_icon">
-					<a href="#">
-						<FontAwesomeIcon icon={faTwitter}/>
-					</a>
-				</div>
-				<div className="social_icon">
-					<a href="#">
-						<FontAwesomeIcon icon={faTelegram}/>
-					</a>
-				</div>
+				{
+					social_media_data.map((item,index)=>{
+						return 	<div className="social_icon" key={index}>
+							<Link href={item.phone_link}>
+								<a target="_blank">
+									<FontAwesomeIcon icon={item.icon}/>
+								</a>
+							</Link>
 
+						</div>
+					})
+				}
 			</div>
 
 		</div>
@@ -47,10 +58,10 @@ const Wrapper = styled.div`
       font-weight: 600;
       font-size: 18px;
       line-height: 22px;
-      text-align: center;
+      //text-align: center;
       text-transform: capitalize;
 
-      color: #000000;
+      color: #DF0606;
     }
 
     .social_icons_inner {

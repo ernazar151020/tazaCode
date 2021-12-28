@@ -89,13 +89,13 @@ const Wrapper = styled.div`
     }
 
     :hover {
-      .link {
+      .phone_link {
         color: #DF0606;;
         transition: all 0.3s ease;
       }
     }
 
-    .link {
+    .phone_link {
       transition: all 0.3s ease;
       font-weight: 600;
       font-size: 18px;

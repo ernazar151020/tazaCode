@@ -6,7 +6,32 @@ import {
 import {faFacebookF, faInstagram, faWhatsapp, faTwitter, faTelegram} from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import FooterForm from "./FooterForm";
+import Link from "next/link"
+import Share from "../Share/Share";
 
+
+const social_media_data = [
+	// {
+	// 	phone_link:"",
+	// 	icon:faFacebookF
+	// },
+	{
+		phone_link: "https://www.instagram.com/smartpost.kg/?hl=ru",
+		icon: faInstagram
+	}, {
+		phone_link: "https://wa.me/+996997948888",
+		icon: faWhatsapp
+	},
+	// {
+	// 	phone_link:"",
+	// 	icon:faTwitter
+	// }
+	// ,
+	{
+		phone_link: "tg://resolve?domain=tazacode",
+		icon: faTelegram
+	},
+]
 
 const Footer = () => {
 	return <Wrapper>
@@ -18,50 +43,24 @@ const Footer = () => {
 						<h3>message us</h3>
 						<div className="email">
 							<FontAwesomeIcon icon={faEnvelope}/>
-							<a href="#">tazacode@gmail.com</a>
+							<Link href={"mailto:tazacode@gmail.com"}>
+								<a target={"_blank"}>tazacode@gmail.com</a>
+							</Link>
 						</div>
 					</div>
 					<div className="phone_wrap">
 						<h3>call us</h3>
+						{/*<div className="phone">*/}
+						{/*	<FontAwesomeIcon icon={faPhoneAlt}/>*/}
+						{/*	<a href="tel:+996666655555555">+996 6666 5555 5555</a>*/}
+						{/*</div>*/}
 						<div className="phone">
 							<FontAwesomeIcon icon={faPhoneAlt}/>
-							<a href="tel:+996666655555555">+996 6666 5555 5555</a>
-						</div>
-						<div className="phone">
-							<FontAwesomeIcon icon={faPhoneAlt}/>
-							<a href="tel:+996666655555555">+996 6666 5555 5555</a>
+							<a href="tel:+996997948888">+996997948888</a>
 						</div>
 					</div>
 					<div className="social_icons">
-						<h3>follow us</h3>
-						<div className="social_icons_inner">
-							<div className="social_icon">
-								<a href="#">
-									<FontAwesomeIcon icon={faFacebookF}/>
-								</a>
-							</div>
-							<div className="social_icon">
-								<a href="#">
-									<FontAwesomeIcon icon={faInstagram}/>
-								</a>
-							</div>
-							<div className="social_icon">
-								<a href="#">
-									<FontAwesomeIcon icon={faWhatsapp}/>
-								</a>
-							</div>
-							<div className="social_icon">
-								<a href="#">
-									<FontAwesomeIcon icon={faTwitter}/>
-								</a>
-							</div>
-							<div className="social_icon">
-								<a href="#">
-									<FontAwesomeIcon icon={faTelegram}/>
-								</a>
-							</div>
-
-						</div>
+						<Share/>
 
 					</div>
 				</FooterInfo>
@@ -105,14 +104,14 @@ const FooterInfo = styled.div`
     line-height: 59px;
     color: #DF0606;
     margin-bottom: 28px;
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
       font-size: 28px;
     }
   }
 
   .email_wrap {
     margin-bottom: 42px;
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
       margin-bottom: 32px;
     }
 
@@ -123,7 +122,7 @@ const FooterInfo = styled.div`
       color: #FFFFFF;
       margin-bottom: 35px;
       text-transform: uppercase;
-      @media(max-width: 768px){
+      @media (max-width: 768px) {
         font-size: 18px;
         margin-bottom: 15px;
       }
@@ -137,7 +136,7 @@ const FooterInfo = styled.div`
       @media (max-width: 768px) {
         justify-content: center;
       }
- 
+
 
       svg {
         font-size: 30px;
@@ -161,7 +160,7 @@ const FooterInfo = styled.div`
 
   .phone_wrap {
     margin-bottom: 42px;
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
       margin-bottom: 32px;
     }
 
@@ -172,7 +171,7 @@ const FooterInfo = styled.div`
       color: #FFFFFF;
       margin-bottom: 35px;
       text-transform: uppercase;
-      @media(max-width: 768px){
+      @media (max-width: 768px) {
         font-size: 18px;
         margin-bottom: 15px;
       }

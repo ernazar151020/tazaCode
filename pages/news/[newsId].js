@@ -39,14 +39,14 @@ const NewsDetail = () => {
 							<div className="author">
 								author: 	{newsDetail?.author}
 							</div>
-							<div className="date">
-								{newsDetail?.date}
-							</div>
+							{/*<div className="date">*/}
+							{/*	{newsDetail?.date}*/}
+							{/*</div>*/}
 						</div>
 						<div className="image">
 							{
 								newsDetail?.image && 	<Image
-									src={newsDetail?.image}
+									src={newsDetail?.image} width={"300"} height={"200"}
 								/>
 							}
 
@@ -127,6 +127,8 @@ const NewsHeader = styled.div`
   .header_content {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
+    position: relative;
+    z-index: 100;
 
     .info {
       font-weight: 600;

@@ -9,7 +9,7 @@ const News = () => {
 	const router = useRouter()
 
 	const handlePushToNewsDetail = (id) => {
-		console.log(id , "<<==id==>")
+
 		router.push(`/news/${id}`)
 	}
 
@@ -26,12 +26,12 @@ const News = () => {
 					newsData.map((item, index) => {
 						return <div className="news-item" key={index} onClick={() => handlePushToNewsDetail(item.id)}>
 							<div className="item_image">
-								<Image src={item.image}/>
+								<Image src={item.image} width={"300"} height={"200"}/>
 
 							</div>
-							<div className="category">
-								{item.category}
-							</div>
+							{/*<div className="category">*/}
+							{/*	{item.category}*/}
+							{/*</div>*/}
 
 							<div className="item_info">
 								<div className="date_and_author">
@@ -69,7 +69,7 @@ const Wrapper = styled.div`
 
   .title {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 22px;
     color: #242424;
     margin-bottom: 11px;
@@ -159,7 +159,7 @@ const NewsContent = styled.div`
 
     .category {
       position: absolute;
-      top: 50%;
+      top: 55%;
       transform: translateY(-15px);
       left: 20px;
       font-weight: 600;
@@ -176,7 +176,9 @@ const NewsContent = styled.div`
   }
 
 
-  .date_and_author {
+  .date_and_author
+  {
+    text-align: center;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
@@ -191,7 +193,7 @@ const NewsContent = styled.div`
 
   .title {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 15px;
     line-height: 29px;
     color: #000000;
     @media (max-width: 768px) {
@@ -200,6 +202,9 @@ const NewsContent = styled.div`
   }
 
   .button {
+    position: absolute;
+    left: 30%;
+    bottom: 10px;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
@@ -207,6 +212,7 @@ const NewsContent = styled.div`
     color: #DF0606;
     display: flex;
     align-items: center;
+   
     @media (max-width: 768px) {
       justify-content: center;
     }

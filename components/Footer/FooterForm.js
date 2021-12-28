@@ -1,22 +1,83 @@
 import styled from "styled-components"
+import {useState} from "react";
+// import axios from "axios";
 
 const FooterForm = () => {
 
+	const [inputText, setInputText] = useState({
+		name: "",
+		email: "",
+		message: ""
+	})
+
+	const [error, setError] = useState({
+		name: "",
+		email: "",
+		message: ""
+	})
+
+	const handleChange = (e) => {
+		const name = e.target.name
+		const value = e.target.value
+		setInputText({...inputText, [name]: value})
+		setError({
+			name: null,
+			email: null,
+			message: null
+		})
+	}
+
 	const handleSubmit = (e) => {
 		e.preventDefault()
+		if (!inputText.name || !inputText.email) {
+			let errors = {}
+			!inputText.name && (error.name = "Обязательное поле")
+			!inputText.email && (error.email = "Обязательное поле")
+			setError(old => ({...old, ...errors}))
+		} else {
+			setInputText({
+				name: "",
+				email: "",
+				message: ""
+			})
+		}
+		//
+		// axios.post('http://localhost:3000/api/email',{email:inputText.email})
+		// 	.then(
+		//
+		// 		(res)=>{
+		// 			alert('Send Mail To You')
+		// 			// setEmail('')
+		//
+		// 		}
+		//
+		// 	).catch(
+		// 	(e)=>console.log(e)
+		// )
 	}
 
 	return <Wrapper>
 		<form onSubmit={handleSubmit}>
 			<div className="form_group">
 				<div className="input">
-					<input type="text " placeholder={"Your name"}/>
+					<input type="text " placeholder={"Your name"} name={"name"} onChange={handleChange}
+					       value={inputText.name}/>
+					{
+						error.name && <span className="error"> Обязательное поле</span>
+					}
+
 				</div>
 				<div className="input">
-					<input type="email " required placeholder={"your email*"}/>
+					<input type="email " placeholder={"your email*"} name={"email"} onChange={handleChange}
+					       value={inputText.email}/>
+					{
+						error.email && <span className="error"> Обязательное поле</span>
+					}
 				</div>
 				<div className="input">
-					<textarea placeholder={"describe your project"}></textarea>
+					<textarea placeholder={"describe your project"} name={"message"} onChange={handleChange}
+					          value={inputText.message}></textarea>
+
 				</div>
 				<div className="submit_button">
 					<button>Send your order</button>
@@ -33,7 +94,7 @@ export default FooterForm
 
 const Wrapper = styled.div`
   width: 90%;
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     text-align: center;
     width: 100%;
   }
@@ -53,7 +114,7 @@ const Wrapper = styled.div`
         font-size: 18px;
         line-height: 18px;
         text-transform: uppercase;
-        @media(max-width: 768px){
+        @media (max-width: 768px) {
           font-size: 14px;
           line-height: 14px;
           padding: 13px 7px 7px 7px;
@@ -65,17 +126,22 @@ const Wrapper = styled.div`
           line-height: 18px;
           text-transform: uppercase;
           color: #FFFFFF;
-          @media(max-width: 768px){
+          @media (max-width: 768px) {
             font-size: 14px;
             line-height: 14px;
           }
         }
       }
 
+      .error {
+        color: red;
+        margin-top: 10px;
+      }
+
       textarea {
         height: 230px;
         resize: none;
-        @media(max-width: 768px){
+        @media (max-width: 768px) {
           height: 180px;
         }
 
@@ -97,7 +163,7 @@ const Wrapper = styled.div`
       color: #FFFFFF;
       padding: 10px;
       cursor: pointer;
-      @media(max-width: 768px){
+      @media (max-width: 768px) {
         font-size: 14px;
         line-height: 14px;
       }
@@ -109,7 +175,8 @@ const Wrapper = styled.div`
     }
 
   }
-  .footer_description{
+
+  .footer_description {
     width: 90%;
     text-align: end;
     font-weight: 600;

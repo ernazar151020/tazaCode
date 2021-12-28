@@ -19,7 +19,7 @@ const Modal = () => {
 				</div>
 				<div className="image">
 					{
-						item?.image && <Image src={item.image}/>
+						item?.image && <Image src={item.image} width={"290"} height={"200"} />
 
 					}
 				</div>
@@ -27,13 +27,13 @@ const Modal = () => {
 					{item?.name}
 				</div>
 				<div className="position">
-					{item?.position}
+					{item?.dev_type}
 				</div>
 				<div className="stacks">
 					<div className="stack_title">stacks :</div>
 					{
-						item?.stacks.map((item, index) => {
-							return <span key={index}>{item}</span>
+						item?.skills?.slice(0,10).map((item, index) => {
+							return <span key={index}> {item} ,  </span>
 						})
 					}
 
@@ -66,6 +66,9 @@ const Modal = () => {
 export default Modal
 
 const Wrapper = styled.div`
+  max-width: 400px;
+  overflow-y:scroll ;
+
   .modal {
     position: fixed;
     inset: 0;
@@ -82,6 +85,7 @@ const Wrapper = styled.div`
     transform: translateY(0);
     transition: all 0.3s ease;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -97,11 +101,15 @@ const Wrapper = styled.div`
     cursor: pointer;
     background: #000;
     padding: 7px;
+    z-index: 100;
   }
 
   .modal_content {
+    max-width: 500px;
+    max-height: 700px;
+    overflow-y: scroll;
     background: #fff;
-    padding: 40px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,27 +120,14 @@ const Wrapper = styled.div`
 
   }
 
-  .image {
-    overflow: hidden;
-
-    img {
-      height: 240px;
-      object-fit: cover;
-      width: 100%;
-      transition: all 0.4s ease;
-      @media (max-width: 768px) {
-        height: 200px;
-      }
-    }
-  }
 
   .title {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     text-align: center;
     color: #DF0606;
-    margin: 20px 0 5px;
+    margin: 10px 0 5px;
     @media (max-width: 768px) {
       font-size: 18px;
     }
@@ -141,7 +136,7 @@ const Wrapper = styled.div`
 
   .position {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
     text-align: center;
     color: #242424;
@@ -151,26 +146,32 @@ const Wrapper = styled.div`
   }
 
   .stacks {
-    display: flex;
-    margin-top: 30px;
+    //display: flex;
+    margin-top: 20px;
+    max-width: 60%;
+    word-wrap: break-word;
+    //max-width: 100px;
+    .stack_title {
+      text-align: center;
 
-    span {
       font-weight: 600;
       font-size: 15.5382px;
       line-height: 19px;
-      text-align: center;
-      color: #DF0606;
-    }
-
-    span.stacks_title {
-      font-weight: 600;
-      font-size: 15.5382px;
-      line-height: 19px;
-      text-align: center;
-      color: #242424;
+      //text-align: center;
       margin-right: 10px;
+      color: #DF0606;
+
 
     }
+    span {
+      word-wrap: break-word;
+      font-weight: 700;
+      font-size: 15.5382px;
+      line-height: 25px;
+      text-align: center;
+    }
+
+
   }
 
   .social_media {

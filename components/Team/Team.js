@@ -16,6 +16,8 @@ import {useGlobalContext} from "../../context/Context";
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
 
+
+
 const Team = () => {
 
 	const {handleOpenModal} = useGlobalContext()
@@ -78,7 +80,13 @@ const Team = () => {
 	</Wrapper>
 }
 
+
 export default Team
+
+
+
+
+
 
 const Wrapper = styled.div`
   padding: 53px 0 90px;

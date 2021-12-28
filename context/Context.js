@@ -4,6 +4,8 @@ const ContextWrapper = React.createContext()
 
 const Context = ({children}) => {
 
+
+
 	const [isOpen, setIsOpen] = useState("")
 	const [modalIsOpen, setModalIsOpen] = useState("")
 	const [modalContent, setModalContent] = useState(null)

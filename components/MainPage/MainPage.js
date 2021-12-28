@@ -20,26 +20,26 @@ const MainPage = () => {
 						to collaborate with
 					</div>
 					<div className="projects">
-						<Link href={"/projects"}>
+						{/*<Link href={"/projects"}>*/}
 							<div className="icon">
 								<Image src={uygo}/>
 							</div>
-						</Link>
-						<Link href={"/projects"}>
+						{/*</Link>*/}
+						{/*<Link href={"/projects"}>*/}
 							<div className="icon">
 								<Image src={ime}/>
 							</div>
-						</Link>
-						<Link href={"/projects"}>
+						{/*</Link>*/}
+						{/*<Link href={"/projects"}>*/}
 							<div className="icon">
 								<Image src={mer}/>
 							</div>
-						</Link>
-						<Link href={"/projects"}>
+						{/*</Link>*/}
+						{/*<Link href={"/projects"}>*/}
 							<div className="icon">
 								<Image src={medbase}/>
 							</div>
-						</Link>
+						{/*</Link>*/}
 
 					</div>
 				</div>

@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Image from "next/image";
 import Bg from "../../assets/about-us-bg.svg";
 import Link from "next/link"
+import {about_us_data} from "../../utils/pagesData/about_us_data";
 
 
 const AboutUs = () => {
@@ -15,24 +16,21 @@ const AboutUs = () => {
 			</div>
 			<AboutUsContent>
 				<div className="text_wrap">
+
 					<div className="text">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
-						venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent
-						elementum facilisis leo, vel
-					</div>
-					<div className="text">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
-						venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent
-						elementum facilisis leo, vel
+
+							{
+							about_us_data.text
+						}
 					</div>
 				</div>
 
-				<div className="button">
-					<Link href={"/about-us"}>
-						<button>read more</button>
-					</Link>
+				{/*<div className="button">*/}
+				{/*	<Link href={"/about-us"}>*/}
+				{/*		<button>read more</button>*/}
+				{/*	</Link>*/}
 
-				</div>
+				{/*</div>*/}
 			</AboutUsContent>
 		</div>
 	</Wrapper>
@@ -107,12 +105,16 @@ const Wrapper = styled.div`
 `
 
 const AboutUsContent = styled.div`
-  //width: 50%;
+  width: 80%;
+  margin: 0 auto;
+  @media(max-width: 768px){
+    width: 95%;
+  }
   .text_wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
+    //display: flex;
+    //justify-content: space-between;
+    //align-items: center;
+    //justify-content: center;
     @media(max-width: 768px){
       flex-direction: column;
       justify-content: center;
@@ -121,30 +123,21 @@ const AboutUsContent = styled.div`
   }
 
   .text {
-    width: 50%;
+    //width: 50%;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 32px;
     text-align: center;
     color: #FFFFFF;
+    margin: 0 auto;
     margin-bottom: 27px;
     @media(max-width: 768px){
       width: 90%;
       font-size: 15px;
-    }
-    :first-child {
-      margin-right: 50px;
-      @media(max-width: 768px){
-        margin-right: 0;
-      }
+     
     }
 
-    :last-child {
-      margin-left: 50px;
-      @media(max-width: 768px){
-        margin-right: 0;
-      }
-    }
+
   }
 
   .button {

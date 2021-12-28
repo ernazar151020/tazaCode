@@ -151,7 +151,7 @@ const ServicesContent = styled.div`
 
   .description {
     font-weight: 600;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 20px;
     text-align: center;
   }

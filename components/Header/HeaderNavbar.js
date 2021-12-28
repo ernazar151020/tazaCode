@@ -38,7 +38,7 @@ const HeaderNavbar = () => {
 						<LogoWrapper>
 							<Image src={Logo} alt="" onClick={handlePush}/>
 						</LogoWrapper>
-						<SearchInput/>
+						{/*<SearchInput/>*/}
 						<div className="burger">
 							<NavbarBurger/>
 						</div>

@@ -10,26 +10,32 @@ export const servicesData = [
 	{
 		logo:web,
 		title:"web development",
-		description:"lorem ipsum dolor sit amet, consectetur adipiscing elit ut "
+		description:"\n" +
+			"Create complex enterprise software, ensure reliable software integration, modernise your legacy system.  "
 	},	{
 		logo:mobile,
 		title:"mobile development",
-		description:"lorem ipsum dolor sit amet, consectetur adipiscing elit ut "
+		description:"\n" +
+			"Create an impactful mobile app that fits your brand and industry within a shorter time frame.  "
 	},	{
 		logo:ui_ux,
 		title:"ui/ux design",
-		description:"lorem ipsum dolor sit amet, consectetur adipiscing elit ut "
+		description:"\n" +
+			"Build the product you need on time with an experienced team that uses a clear and effective design process.  "
 	},	{
 		logo:QA,
 		title:"qa & testing",
-		description:"lorem ipsum dolor sit amet, consectetur adipiscing elit ut "
+		description:"\n" +
+			"Turn to our experts to perform comprehensive, multi-stage testing and auditing of your software.  "
 	},{
 		logo:consulting,
 		title:"it consultancy",
-		description:"lorem ipsum dolor sit amet, consectetur adipiscing elit ut "
+		description:"\n" +
+			"Trust our top minds to eliminate workflow pain points, implement new tech, and consolidate app portfolios.  "
 	},{
 		logo:team,
 		title:"dedicated team",
-		description:"lorem ipsum dolor sit amet, consectetur adipiscing elit ut "
+		description:"\n" +
+			"A loyal software development team with niche skills and deep expertise.  "
 	},
 ]

@@ -19,7 +19,7 @@ export default function Home() {
 				<ScrollPagination/>
 				<MainPage/>
 				<Services/>
-				<Projects/>
+				{/*<Projects/>*/}
 				<AboutUs/>
 				<News/>
 				<Team/>

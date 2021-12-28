@@ -2,56 +2,32 @@ import news_1 from "../../assets/news/news-1.svg"
 
 export const newsData = [
 	{
-		image:news_1,
+		image:"https://images.unsplash.com/photo-1593642634367-d91a135587b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8d29ya3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
 		category:"development",
 		date:"december, 2021",
-		author:"tom ford",
-		title:"How  Web App Can Benefit  Online stores?",
+		author:"Admir Kurman ",
+		title:"Why use TAZA CODE to supply software solutions for my business? ",
 		id:1,
-		text:"Elementum Proin Mollis Consectetur Nec. Nam Pretium Eget Sed Pellentesque Nulla Commodo. Cursus Risus Faucibus Mi Elementum Diam Sem Enim. Consectetur Scelerisque Lorem Suspendisse Vel Condimentum Posuere. Nisi, Arcu Integer Morbi Id. Quisque At Eget Donec Quis Tortor. Sit Purus Ut Sed Sed. Fermentum Massa Sit Sapien Sapien Et Facilisis Turpis. Proin Tempus, Quis Nunc Felis Amet, Magna Suspendisse. Diam Libero Urna Augue Dictumst Laoreet At. Nisl Tortor Magna At Enim. Mattis Cursus Nulla Id Semper Vitae Amet, Vulputate Nulla. Nec Nulla A Venenatis Quam Mauris Vitae In Sit. Consectetur Sagittis Quisque Id Mauris Justo Rhoncus. Amet Sed Volutpat Lacus Dolor Eu Pellentesque Proin. Sit Justo, Felis Leo Libero Risus Eget Ut. Elementum Massa Pellentesque Eget Duis Lacinia. Ullamcorper Maecenas Tellus Id Blandit Ipsum Condimentum. Et Viverra Amet Egestas In Cursus. Egestas Massa At Venenatis Enim Sed. Consequat Sit Eu Et Id Dignissim Ac Scelerisque Etiam. A Lacus, Gravida Rutrum Nulla Placerat Porttitor. Rutrum Viverra Tincidunt Fermentum Aliquam Elit, Pellentesque Sit. Accumsan Id Suscipit Facilisi Arcu Nibh. Odio Accumsan, Ac Dignissim Purus Neque Augue Malesuada Nisl Tincidunt. Tempus Eu Pharetra, Mauris, Blandit Amet. In Elementum Semper Faucibus Cursus Massa. Sagittis Varius Turpis Potenti Accumsan Volutpat Proin Cursus Arcu Neque."
+		text:"The digital era has increasingly advanced by lockdowns and WHF (working from home). Being technologically advanced means that you have personalised software created for your business. This allows the company to interact with customers, budget and manage marketing campaigns, operate  payroll, invoicing and accounting systems, and HR databases. Personally I like when all these processes are interlinked with each other and calculate financial KPIs ( e.g. return on investment).  \n" +
+			"\n" +
+			"Automating processes is fundamental to efficiency and speed of data throughput, enabling businesses to be competitive in specialised environments, surrounded by rivals. Integrated software will have a radical impact on the company’s performance and will significantly improve its performance.   \n" +
+			"\n" +
+			"Whether you decide to develop your management systems or your customer service, personalised software, meeting your specific needs, will enhance your customer service experience. Fully functional customer service through integrated front-end customer-facing e-commerce  leads to increased revenue and customer satisfaction. The integrated software solution provides a pipeline for revenues, capable of expansion in the long run.\n" +
+			"\n" +
+			"Software for business is central to and essential for storing and analysing data collected on a routine basis. This could be used by the company to identify and analyse trends in data resulting from the purchasing behaviour of its customers. This data includes sales numbers, sales revenue, repeat purchasing, categories of products sold, categories of customers, influences on purchasing decisions.      \n" +
+			" \n" +
+			"Accounting software is essential to record revenues, costs and expenses and calculate profitability, break-even, taxation, P&L turnover, balance sheet, payroll, VAT, and budgeting and/or forecasting. This information must be collected, tested for accuracy, and analysed as a range of  financial data, KPIs and standard benchmarks are  pivotal in business management. \n" +
+			" \n" +
+			"Business software helps to run businesses smoothly and efficiently. Finding appropriate programming companies and generic software applications is an important precursor, whilst getting a tailor-made service for your business software needs, is something that comes with growing business maturity and capital investment.  \n"
 	},
 	{
-		image:news_1,
+		image:" https://images.unsplash.com/photo-1625838144804-300f3907c110?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aXR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
 		category:"development",
 		date:"december, 2021",
-		author:"tom ford",
-		title:"How  Web App Can Benefit  Online stores?",
+		author:"Admir Kurman ",
+		title:"Why TAZA CODE?\n",
 		id:2,
-		text:"Ernazar Elementum Proin Mollis Consectetur Nec. Nam Pretium Eget Sed Pellentesque Nulla Commodo. Cursus Risus Faucibus Mi Elementum Diam Sem Enim. Consectetur Scelerisque Lorem Suspendisse Vel Condimentum Posuere. Nisi, Arcu Integer Morbi Id. Quisque At Eget Donec Quis Tortor. Sit Purus Ut Sed Sed. Fermentum Massa Sit Sapien Sapien Et Facilisis Turpis. Proin Tempus, Quis Nunc Felis Amet, Magna Suspendisse. Diam Libero Urna Augue Dictumst Laoreet At. Nisl Tortor Magna At Enim. Mattis Cursus Nulla Id Semper Vitae Amet, Vulputate Nulla. Nec Nulla A Venenatis Quam Mauris Vitae In Sit. Consectetur Sagittis Quisque Id Mauris Justo Rhoncus. Amet Sed Volutpat Lacus Dolor Eu Pellentesque Proin. Sit Justo, Felis Leo Libero Risus Eget Ut. Elementum Massa Pellentesque Eget Duis Lacinia. Ullamcorper Maecenas Tellus Id Blandit Ipsum Condimentum. Et Viverra Amet Egestas In Cursus. Egestas Massa At Venenatis Enim Sed. Consequat Sit Eu Et Id Dignissim Ac Scelerisque Etiam. A Lacus, Gravida Rutrum Nulla Placerat Porttitor. Rutrum Viverra Tincidunt Fermentum Aliquam Elit, Pellentesque Sit. Accumsan Id Suscipit Facilisi Arcu Nibh. Odio Accumsan, Ac Dignissim Purus Neque Augue Malesuada Nisl Tincidunt. Tempus Eu Pharetra, Mauris, Blandit Amet. In Elementum Semper Faucibus Cursus Massa. Sagittis Varius Turpis Potenti Accumsan Volutpat Proin Cursus Arcu Neque."
-	},{
-		image:news_1,
-		category:"development",
-		date:"december, 2021",
-		author:"tom ford",
-		title:"How  Web App Can Benefit  Online stores?",
-		id:3,
-		text:"Elementum Proin Mollis Consectetur Nec. Nam Pretium Eget Sed Pellentesque Nulla Commodo. Cursus Risus Faucibus Mi Elementum Diam Sem Enim. Consectetur Scelerisque Lorem Suspendisse Vel Condimentum Posuere. Nisi, Arcu Integer Morbi Id. Quisque At Eget Donec Quis Tortor. Sit Purus Ut Sed Sed. Fermentum Massa Sit Sapien Sapien Et Facilisis Turpis. Proin Tempus, Quis Nunc Felis Amet, Magna Suspendisse. Diam Libero Urna Augue Dictumst Laoreet At. Nisl Tortor Magna At Enim. Mattis Cursus Nulla Id Semper Vitae Amet, Vulputate Nulla. Nec Nulla A Venenatis Quam Mauris Vitae In Sit. Consectetur Sagittis Quisque Id Mauris Justo Rhoncus. Amet Sed Volutpat Lacus Dolor Eu Pellentesque Proin. Sit Justo, Felis Leo Libero Risus Eget Ut. Elementum Massa Pellentesque Eget Duis Lacinia. Ullamcorper Maecenas Tellus Id Blandit Ipsum Condimentum. Et Viverra Amet Egestas In Cursus. Egestas Massa At Venenatis Enim Sed. Consequat Sit Eu Et Id Dignissim Ac Scelerisque Etiam. A Lacus, Gravida Rutrum Nulla Placerat Porttitor. Rutrum Viverra Tincidunt Fermentum Aliquam Elit, Pellentesque Sit. Accumsan Id Suscipit Facilisi Arcu Nibh. Odio Accumsan, Ac Dignissim Purus Neque Augue Malesuada Nisl Tincidunt. Tempus Eu Pharetra, Mauris, Blandit Amet. In Elementum Semper Faucibus Cursus Massa. Sagittis Varius Turpis Potenti Accumsan Volutpat Proin Cursus Arcu Neque."
-	},
-	{
-		image:news_1,
-		category:"development",
-		date:"december, 2021",
-		author:"tom ford",
-		title:"How  Web App Can Benefit  Online stores?",
-		id:4,
-		text:"Elementum Proin Mollis Consectetur Nec. Nam Pretium Eget Sed Pellentesque Nulla Commodo. Cursus Risus Faucibus Mi Elementum Diam Sem Enim. Consectetur Scelerisque Lorem Suspendisse Vel Condimentum Posuere. Nisi, Arcu Integer Morbi Id. Quisque At Eget Donec Quis Tortor. Sit Purus Ut Sed Sed. Fermentum Massa Sit Sapien Sapien Et Facilisis Turpis. Proin Tempus, Quis Nunc Felis Amet, Magna Suspendisse. Diam Libero Urna Augue Dictumst Laoreet At. Nisl Tortor Magna At Enim. Mattis Cursus Nulla Id Semper Vitae Amet, Vulputate Nulla. Nec Nulla A Venenatis Quam Mauris Vitae In Sit. Consectetur Sagittis Quisque Id Mauris Justo Rhoncus. Amet Sed Volutpat Lacus Dolor Eu Pellentesque Proin. Sit Justo, Felis Leo Libero Risus Eget Ut. Elementum Massa Pellentesque Eget Duis Lacinia. Ullamcorper Maecenas Tellus Id Blandit Ipsum Condimentum. Et Viverra Amet Egestas In Cursus. Egestas Massa At Venenatis Enim Sed. Consequat Sit Eu Et Id Dignissim Ac Scelerisque Etiam. A Lacus, Gravida Rutrum Nulla Placerat Porttitor. Rutrum Viverra Tincidunt Fermentum Aliquam Elit, Pellentesque Sit. Accumsan Id Suscipit Facilisi Arcu Nibh. Odio Accumsan, Ac Dignissim Purus Neque Augue Malesuada Nisl Tincidunt. Tempus Eu Pharetra, Mauris, Blandit Amet. In Elementum Semper Faucibus Cursus Massa. Sagittis Varius Turpis Potenti Accumsan Volutpat Proin Cursus Arcu Neque."
-	},
-	{
-		image:news_1,
-		category:"development",
-		date:"december, 2021",
-		author:"tom ford",
-		title:"How  Web App Can Benefit  Online stores?",
-		id:5,
-		text:"Elementum Proin Mollis Consectetur Nec. Nam Pretium Eget Sed Pellentesque Nulla Commodo. Cursus Risus Faucibus Mi Elementum Diam Sem Enim. Consectetur Scelerisque Lorem Suspendisse Vel Condimentum Posuere. Nisi, Arcu Integer Morbi Id. Quisque At Eget Donec Quis Tortor. Sit Purus Ut Sed Sed. Fermentum Massa Sit Sapien Sapien Et Facilisis Turpis. Proin Tempus, Quis Nunc Felis Amet, Magna Suspendisse. Diam Libero Urna Augue Dictumst Laoreet At. Nisl Tortor Magna At Enim. Mattis Cursus Nulla Id Semper Vitae Amet, Vulputate Nulla. Nec Nulla A Venenatis Quam Mauris Vitae In Sit. Consectetur Sagittis Quisque Id Mauris Justo Rhoncus. Amet Sed Volutpat Lacus Dolor Eu Pellentesque Proin. Sit Justo, Felis Leo Libero Risus Eget Ut. Elementum Massa Pellentesque Eget Duis Lacinia. Ullamcorper Maecenas Tellus Id Blandit Ipsum Condimentum. Et Viverra Amet Egestas In Cursus. Egestas Massa At Venenatis Enim Sed. Consequat Sit Eu Et Id Dignissim Ac Scelerisque Etiam. A Lacus, Gravida Rutrum Nulla Placerat Porttitor. Rutrum Viverra Tincidunt Fermentum Aliquam Elit, Pellentesque Sit. Accumsan Id Suscipit Facilisi Arcu Nibh. Odio Accumsan, Ac Dignissim Purus Neque Augue Malesuada Nisl Tincidunt. Tempus Eu Pharetra, Mauris, Blandit Amet. In Elementum Semper Faucibus Cursus Massa. Sagittis Varius Turpis Potenti Accumsan Volutpat Proin Cursus Arcu Neque."
-	},
-	{
-		image:news_1,
-		category:"development",
-		date:"december, 2021",
-		author:"tom ford",
-		title:"How  Web App Can Benefit  Online stores?",
-		id:6,
-		text:"Elementum Proin Mollis Consectetur Nec. Nam Pretium Eget Sed Pellentesque Nulla Commodo. Cursus Risus Faucibus Mi Elementum Diam Sem Enim. Consectetur Scelerisque Lorem Suspendisse Vel Condimentum Posuere. Nisi, Arcu Integer Morbi Id. Quisque At Eget Donec Quis Tortor. Sit Purus Ut Sed Sed. Fermentum Massa Sit Sapien Sapien Et Facilisis Turpis. Proin Tempus, Quis Nunc Felis Amet, Magna Suspendisse. Diam Libero Urna Augue Dictumst Laoreet At. Nisl Tortor Magna At Enim. Mattis Cursus Nulla Id Semper Vitae Amet, Vulputate Nulla. Nec Nulla A Venenatis Quam Mauris Vitae In Sit. Consectetur Sagittis Quisque Id Mauris Justo Rhoncus. Amet Sed Volutpat Lacus Dolor Eu Pellentesque Proin. Sit Justo, Felis Leo Libero Risus Eget Ut. Elementum Massa Pellentesque Eget Duis Lacinia. Ullamcorper Maecenas Tellus Id Blandit Ipsum Condimentum. Et Viverra Amet Egestas In Cursus. Egestas Massa At Venenatis Enim Sed. Consequat Sit Eu Et Id Dignissim Ac Scelerisque Etiam. A Lacus, Gravida Rutrum Nulla Placerat Porttitor. Rutrum Viverra Tincidunt Fermentum Aliquam Elit, Pellentesque Sit. Accumsan Id Suscipit Facilisi Arcu Nibh. Odio Accumsan, Ac Dignissim Purus Neque Augue Malesuada Nisl Tincidunt. Tempus Eu Pharetra, Mauris, Blandit Amet. In Elementum Semper Faucibus Cursus Massa. Sagittis Varius Turpis Potenti Accumsan Volutpat Proin Cursus Arcu Neque."
+		text:"TAZA means transparent from the Kyrgyz language. We believe that transparency leads to excellent communications and better  relations with our customers. Following this belief, we are totally focussed on your business effectiveness, increasing your profits through the technologies we can upbuild and embed in your company operations. Software development includes mobile, web applications and a smooth transition from old to new. \n" +
+			"TAZA CODE is ready to customise full-cycle software development and meet business specific requirements, bringing the customer a bespoke product, with specifications to meet a range of budgets.  \n"
 	},
 ]

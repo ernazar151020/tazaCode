@@ -5,15 +5,17 @@ export const headerLinksData = [
 	{
 		link:"/about-us",
 		title:"About us"
-	},	{
-		link:"/projects",
-		title:"Products"
-	},{
+	},
+	// {
+	// 	link:"/projects",
+	// 	title:"Products"
+	// },
+	{
 		link:"/news",
 		title:"News"
 	},
 	// {
-	// 	link:"/contacts",
+	// 	phone_link:"/contacts",
 	// 	title:"Contacts"
 	// }	,
 	{
