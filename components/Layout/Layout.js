@@ -7,11 +7,7 @@ import Head from 'next/head'
 
 const Layout = ({children}) => {
 	return <>
-		<Head>
-			<title>TazaCode</title>
-			<meta name="viewport" keywords="tazacode , it company , bishkek , Бишкек , IT компания б Смартпост ,Smartpost , uygo , ime , medbase  , веб разработка , web development , web , android , ios " content="initial-scale=1.0, width=device-width" />
-			<meta property={"og:title"} content={"tazacode"}/>
-		</Head>
+
 		<Wrapper>
 			<Modal/>
 			<SideBar/>
@@ -26,6 +22,6 @@ const Layout = ({children}) => {
 export default Layout
 
 const Wrapper = styled.div`
-	position: relative;
+  position: relative;
 
 `

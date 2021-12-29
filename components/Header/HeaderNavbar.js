@@ -90,11 +90,11 @@ const SingleHeaderLink = ({item}) => {
 
 	return <li onMouseOver={handleMouseOver}
 	           onMouseOut={handleMouseOut}>
-		<span className={!showCode && "hidden"}><FontAwesomeIcon icon={faChevronLeft}/></span>
+		<span className={!showCode && "hidden"}>{"<"}</span>
 
 		<Link href={item.link}>{item.title}</Link>
 		{/*<span className="line"></span>*/}
-		<span className={!showCode && "hidden"}>	<FontAwesomeIcon icon={faChevronRight}/></span>
+		<span className={!showCode && "hidden"}>	{"/>"}</span>
 
 
 	</li>
