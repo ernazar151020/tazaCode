@@ -130,6 +130,11 @@ const AboutUsContent = styled.div`
     text-align: justify;
     text-transform: capitalize;
     color: #ffffff;
+    max-width: 70%;
+    margin: 0 auto;
+    @media (max-width: 768px) {
+      max-width: 90%;
+    }
   }
 `;
 const AboutMembers = styled.div`
