@@ -1,43 +1,43 @@
-import styled from "styled-components"
-import {servicesData} from "./ServicesData";
+import styled from "styled-components";
+import { servicesData } from "./ServicesData";
 import Image from "next/image";
-import Bg from "../../assets/services/background-img.svg"
+import Bg from "../../assets/services/background-img.svg";
 
 const Services = () => {
-	return <Wrapper id={"services"}>
-		<div className="background_img">
-			<Image src={Bg}/>
-		</div>
-		<div className="container">
-			<div className="services_header">
-				<div className="titles">
-					<h3 className="title">/our services/</h3>
-					<h1 className="subtitle">we deliver</h1>
-				</div>
-				{/*<div className="button">*/}
-				{/*	<button className="custom_button">all services</button>*/}
-				{/*</div>*/}
-			</div>
-			<ServicesContent>
-				{
-					servicesData.map((item, index) => {
-						return <div className="services_item" key={index}>
-							<div className="logo">
-								<Image src={item.logo} alt=""/>
-							</div>
-							<h2 className="title">{item.title}</h2>
-							<p className="description">{item.description}</p>
-						</div>
-					})
-				}
+  return (
+    <Wrapper id={"services"}>
+      <div className="background_img">
+        <Image src={Bg} />
+      </div>
+      <div className="container">
+        <div className="services_header">
+          <div className="titles">
+            <h3 className="title">/our services/</h3>
+            <h1 className="subtitle">we deliver</h1>
+          </div>
+          {/*<div className="button">*/}
+          {/*	<button className="custom_button">all services</button>*/}
+          {/*</div>*/}
+        </div>
+        <ServicesContent>
+          {servicesData.map((item, index) => {
+            return (
+              <div className="services_item" key={index}>
+                <div className="logo">
+                  <Image src={item.logo} alt="" priority={true} />
+                </div>
+                <h2 className="title">{item.title}</h2>
+                <p className="description">{item.description}</p>
+              </div>
+            );
+          })}
+        </ServicesContent>
+      </div>
+    </Wrapper>
+  );
+};
 
-			</ServicesContent>
-
-		</div>
-	</Wrapper>
-}
-
-export default Services
+export default Services;
 
 const Wrapper = styled.div`
   padding: 27px 0 55px;
@@ -51,7 +51,6 @@ const Wrapper = styled.div`
     z-index: -1;
 
     img {
-
     }
   }
 
@@ -61,19 +60,18 @@ const Wrapper = styled.div`
     justify-content: space-between;
     @media (max-width: 768px) {
       flex-direction: column;
-      
+
       .button {
         display: none;
       }
     }
-
   }
 
   .title {
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
-    color: #DF0606;
+    color: #df0606;
     margin-bottom: 11px;
   }
 
@@ -110,12 +108,9 @@ const Wrapper = styled.div`
         font-size: 42px;
         left: -30%;
       }
-
     }
-
   }
-
-`
+`;
 
 const ServicesContent = styled.div`
   margin-top: 37px;
@@ -128,7 +123,7 @@ const ServicesContent = styled.div`
     transition: all 0.3s ease;
 
     :hover {
-      background: #FFFFFF;
+      background: #ffffff;
       box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
     }
   }
@@ -155,4 +150,4 @@ const ServicesContent = styled.div`
     line-height: 20px;
     text-align: center;
   }
-`
+`;

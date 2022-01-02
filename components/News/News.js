@@ -1,61 +1,75 @@
-import styled from "styled-components"
-import {newsData} from "../../utils/pagesData/NewsData";
+import styled from "styled-components";
+import { newsData } from "../../utils/pagesData/NewsData";
 import Image from "next/image";
-import {faChevronLeft, faArrowRight, faWindowMinimize} from '@fortawesome/free-solid-svg-icons'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {useRouter} from "next/router";
+import {
+  faChevronLeft,
+  faArrowRight,
+  faWindowMinimize,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRouter } from "next/router";
 
 const News = () => {
-	const router = useRouter()
+  const router = useRouter();
 
-	const handlePushToNewsDetail = (id) => {
+  const handlePushToNewsDetail = (id) => {
+    router.push(`/news/${id}`);
+  };
 
-		router.push(`/news/${id}`)
-	}
+  return (
+    <Wrapper id={"news"} name={"news"}>
+      <div className="container">
+        <div className="news_header">
+          <div className="titles">
+            <h3 className="title">/technews/</h3>
+            <h1 className="subtitle">our latest news</h1>
+          </div>
+        </div>
+        <NewsContent>
+          {newsData.map((item, index) => {
+            return (
+              <div
+                className="news-item"
+                key={index}
+                onClick={() => handlePushToNewsDetail(item.id)}
+              >
+                <div className="item_image">
+                  <Image
+                    src={item.image}
+                    width={"300"}
+                    height={"200"}
+                    alt=""
+                    priority={true}
+                  />
+                </div>
+                {/*<div className="category">*/}
+                {/*	{item.category}*/}
+                {/*</div>*/}
 
-	return <Wrapper id={"news"} name={"news"}>
-		<div className="container">
-			<div className="news_header">
-				<div className="titles">
-					<h3 className="title">/technews/</h3>
-					<h1 className="subtitle">our latest news</h1>
-				</div>
-			</div>
-			<NewsContent>
-				{
-					newsData.map((item, index) => {
-						return <div className="news-item" key={index} onClick={() => handlePushToNewsDetail(item.id)}>
-							<div className="item_image">
-								<Image src={item.image} width={"300"} height={"200"}/>
+                <div className="item_info">
+                  <div className="date_and_author">
+                    <span>{item.date}</span> by <span>{item.author}</span>
+                  </div>
+                  <div className="title">
+                    <div>{item.title}</div>
+                  </div>
+                  <div className="button">
+                    <span>
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </span>
+                    <span>learn more</span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </NewsContent>
+      </div>
+    </Wrapper>
+  );
+};
 
-							</div>
-							{/*<div className="category">*/}
-							{/*	{item.category}*/}
-							{/*</div>*/}
-
-							<div className="item_info">
-								<div className="date_and_author">
-									<span>{item.date}</span> by <span>{item.author}</span>
-								</div>
-								<div className="title">
-									<div>{item.title}</div>
-								</div>
-								<div className="button">
-									<span><FontAwesomeIcon icon={faArrowRight}/></span>
-									<span>learn more</span>
-								</div>
-							</div>
-
-						</div>
-					})
-				}
-
-			</NewsContent>
-		</div>
-	</Wrapper>
-}
-
-export default News
+export default News;
 
 const Wrapper = styled.div`
   padding: 56px 0 53px;
@@ -80,7 +94,7 @@ const Wrapper = styled.div`
     font-weight: 600;
     font-size: 36px;
     line-height: 44px;
-    color: #DF0606;
+    color: #df0606;
     position: relative;
     z-index: 20;
     text-transform: uppercase;
@@ -110,12 +124,9 @@ const Wrapper = styled.div`
         font-size: 35px;
         left: -23%;
       }
-
     }
-
   }
-`
-
+`;
 
 const NewsContent = styled.div`
   display: grid;
@@ -124,7 +135,7 @@ const NewsContent = styled.div`
 
   .news-item {
     text-transform: uppercase;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0px 10px 18px rgba(204, 204, 204, 0.4);
     cursor: pointer;
     position: relative;
@@ -135,7 +146,6 @@ const NewsContent = styled.div`
     max-width: 340px;
     margin: 0 auto;
 
-
     .item_image {
       overflow: hidden;
       position: relative;
@@ -144,9 +154,8 @@ const NewsContent = styled.div`
         height: 240px;
         width: 100%;
         object-fit: cover;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
       }
-
     }
 
     :hover {
@@ -165,9 +174,9 @@ const NewsContent = styled.div`
       font-weight: 600;
       font-size: 14px;
       line-height: 17px;
-      color: #FFFFFF;
+      color: #ffffff;
       padding: 5px 15px;
-      background: #DF0606;
+      background: #df0606;
     }
   }
 
@@ -175,14 +184,12 @@ const NewsContent = styled.div`
     padding: 30px 30px 20px 30px;
   }
 
-
-  .date_and_author
-  {
+  .date_and_author {
     text-align: center;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
-    color: #A5B1C2;
+    color: #a5b1c2;
     margin-bottom: 17px;
     @media (max-width: 768px) {
       font-size: 18px;
@@ -209,10 +216,10 @@ const NewsContent = styled.div`
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
-    color: #DF0606;
+    color: #df0606;
     display: flex;
     align-items: center;
-   
+
     @media (max-width: 768px) {
       justify-content: center;
     }
@@ -223,4 +230,4 @@ const NewsContent = styled.div`
       margin-right: 10px;
     }
   }
-`
+`;

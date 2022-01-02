@@ -1,82 +1,77 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import Image from "next/image";
-import Bg from "../../assets/news/news-bg.svg"
-import Bg_image from "../../assets/news/news-1.svg"
+import Bg from "../../assets/news/news-bg.svg";
+import Bg_image from "../../assets/news/news-1.svg";
 import Share from "../../components/Share/Share";
 import Layout from "../../components/Layout/Layout";
-import {useEffect, useState} from "react";
-import {useRouter} from "next/router";
-import {newsData} from "../../utils/pagesData/NewsData";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { newsData } from "../../utils/pagesData/NewsData";
 
 const NewsDetail = () => {
-	const [newsDetail, setNewsDetail] = useState(null)
-	const {query} = useRouter()
+  const [newsDetail, setNewsDetail] = useState(null);
+  const { query } = useRouter();
 
+  useEffect(() => {
+    const findById = newsData.find((item) => item.id === Number(query.newsId));
 
-	useEffect(() => {
-		const findById = newsData.find((item) => item.id === Number(query.newsId))
+    setNewsDetail({ ...findById });
+  }, []);
 
-		setNewsDetail({...findById})
-	}, [])
+  return (
+    <Layout>
+      <Wrapper>
+        <NewsHeader>
+          <div className="background_img">
+            <Image src={Bg} alt="" priority={true} />
+          </div>
+          <div className="container">
+            <div className="header">
+              <div className="titles">
+                <h3 className="title">/technews/</h3>
+                <h1 className="subtitle">{newsDetail?.title}</h1>
+              </div>
+            </div>
+            <div className="header_content">
+              <div className="info">
+                <div className="author">author: {newsDetail?.author}</div>
+                {/*<div className="date">*/}
+                {/*	{newsDetail?.date}*/}
+                {/*</div>*/}
+              </div>
+              <div className="image">
+                {newsDetail?.image && (
+                  <Image
+                    src={newsDetail?.image}
+                    width={"300"}
+                    height={"200"}
+                    alt=""
+                    priority={true}
+                  />
+                )}
+              </div>
+            </div>
+          </div>
+        </NewsHeader>
+        <NewContent>
+          <div className="container">
+            <p className="text">{newsDetail?.text}</p>
+          </div>
+          <div className="share">
+            <Share />
+          </div>
+        </NewContent>
+      </Wrapper>
+    </Layout>
+  );
+};
 
-
-	return <Layout>
-		<Wrapper>
-
-			<NewsHeader>
-				<div className="background_img">
-					<Image src={Bg}/>
-				</div>
-				<div className="container">
-					<div className="header">
-						<div className="titles">
-							<h3 className="title">/technews/</h3>
-							<h1 className="subtitle">{newsDetail?.title}</h1>
-						</div>
-					</div>
-					<div className="header_content">
-						<div className="info">
-							<div className="author">
-								author: 	{newsDetail?.author}
-							</div>
-							{/*<div className="date">*/}
-							{/*	{newsDetail?.date}*/}
-							{/*</div>*/}
-						</div>
-						<div className="image">
-							{
-								newsDetail?.image && 	<Image
-									src={newsDetail?.image} width={"300"} height={"200"}
-								/>
-							}
-
-						</div>
-					</div>
-				</div>
-
-			</NewsHeader>
-			<NewContent>
-				<div className="container">
-					<p className="text">{newsDetail?.text}</p>
-				</div>
-				<div className="share">
-					<Share/>
-				</div>
-			</NewContent>
-
-		</Wrapper>
-	</Layout>
-}
-
-export default NewsDetail
+export default NewsDetail;
 
 const Wrapper = styled.div`
   padding: 0 0 98px;
   z-index: 20;
-
-
-
-`
+`;
 
 const NewsHeader = styled.div`
   position: relative;
@@ -91,7 +86,6 @@ const NewsHeader = styled.div`
     //z-index: -1;
 
     img {
-
     }
   }
 
@@ -101,7 +95,6 @@ const NewsHeader = styled.div`
     justify-content: center;
     margin-bottom: 89px;
     background: #000;
-
   }
 
   .title {
@@ -115,13 +108,18 @@ const NewsHeader = styled.div`
 
   .subtitle {
     font-weight: 600;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 44px;
     color: #fff;
     position: relative;
     z-index: 20;
     text-transform: uppercase;
-
+    max-width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    @media (max-width: 768px) {
+      max-width: 90%;
+    }
   }
 
   .header_content {
@@ -134,15 +132,15 @@ const NewsHeader = styled.div`
       font-weight: 600;
       font-size: 24px;
       line-height: 29px;
-      color: #FFFFFF;
+      color: #ffffff;
       text-transform: uppercase;
 
       .author {
         margin-bottom: 15px;
+        font-size: 18px;
       }
 
       .date {
-
       }
     }
 
@@ -155,22 +153,26 @@ const NewsHeader = styled.div`
       }
     }
   }
-
-`
+`;
 
 export const NewContent = styled.div`
   position: relative;
-  padding: 130px 0 100px;
+  padding: 70px 0 100px;
   background: #fff;
 
   .text {
-    font-weight: 500;
+    font-weight: 300;
     font-size: 18px;
     line-height: 28px;
     text-align: justify;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: #000000;
-
+    white-space: pre-line;
+    max-width: 70%;
+    margin: 0 auto;
+    @media (max-width: 768px) {
+      max-width: 90%;
+    }
   }
 
   .share {
@@ -179,4 +181,4 @@ export const NewContent = styled.div`
     align-items: center;
     justify-content: center;
   }
-`
+`;

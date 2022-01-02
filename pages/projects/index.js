@@ -1,55 +1,51 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import Image from "next/image";
 import Bg from "../../assets/teams/team-bg.svg";
 import BgBottom from "../../assets/teams/team-bg-bottom.svg";
 import Layout from "../../components/Layout/Layout";
-import {projectsData} from "../../utils/pagesData/projectsData";
+import { projectsData } from "../../utils/pagesData/projectsData";
 
 const Projects = () => {
-	return <Layout>
-		<Wrapper>
-			<div className="background-for-top">
-				<Image src={Bg}/>
-			</div>
-			<div className="background-for-bottom">
-				<Image src={BgBottom}/>
-			</div>
-			<div className="container">
-				<div className="projects_header">
-					<div className="titles">
-						<h3 className="title">/case studies/</h3>
-						<h1 className="subtitle">we deliver</h1>
-					</div>
-				</div>
+  return (
+    <Layout>
+      <Wrapper>
+        <div className="background-for-top">
+          <Image src={Bg} alt="" priority={true} />
+        </div>
+        <div className="background-for-bottom">
+          <Image src={BgBottom} alt="" priority={true} />
+        </div>
+        <div className="container">
+          <div className="projects_header">
+            <div className="titles">
+              <h3 className="title">/case studies/</h3>
+              <h1 className="subtitle">we deliver</h1>
+            </div>
+          </div>
 
-				<ProjectContent>
-						{
-							projectsData.map((item, index) => {
-								return <div className="single_project" key={index}>
-									<div className="title">
-										{item.name}
-									</div>
-									<div className="description">
-										{item.description}
-									</div>
-									<div className="image">
-										<Image src={item.image}/>
-									</div>
-								</div>
+          <ProjectContent>
+            {projectsData.map((item, index) => {
+              return (
+                <div className="single_project" key={index}>
+                  <div className="title">{item.name}</div>
+                  <div className="description">{item.description}</div>
+                  <div className="image">
+                    <Image src={item.image} alt="" priority={true} />
+                  </div>
+                </div>
+              );
+            })}
+          </ProjectContent>
+        </div>
+      </Wrapper>
+    </Layout>
+  );
+};
 
-
-							})
-						}
-					</ProjectContent>
-			</div>
-		</Wrapper>
-	</Layout>
-}
-
-export default Projects
+export default Projects;
 
 const Wrapper = styled.div`
-  background: #DF0606;
+  background: #df0606;
   position: relative;
   padding: 50px 0 150px;
 
@@ -61,7 +57,6 @@ const Wrapper = styled.div`
     margin-bottom: 100px;
     position: relative;
     z-index: 20;
-
   }
 
   .title {
@@ -97,9 +92,7 @@ const Wrapper = styled.div`
       left: -144%;
       text-transform: uppercase;
       z-index: 20;
-
     }
-
   }
 
   .background-for-top {
@@ -115,9 +108,7 @@ const Wrapper = styled.div`
     bottom: 0;
     //z-index: -1;
   }
-
-`
-
+`;
 
 const ProjectContent = styled.div`
   position: relative;
@@ -130,9 +121,7 @@ const ProjectContent = styled.div`
       font-size: 48px;
       line-height: 59px;
       text-align: center;
-      color: #FFFFFF;
-      
-
+      color: #ffffff;
     }
 
     .description {
@@ -140,7 +129,7 @@ const ProjectContent = styled.div`
       font-size: 18px;
       line-height: 22px;
       text-align: center;
-      color: #FFFFFF;
+      color: #ffffff;
       width: 60%;
       margin: 0 auto;
       margin: 20px auto 80px;
@@ -155,4 +144,4 @@ const ProjectContent = styled.div`
       }
     }
   }
-`
+`;

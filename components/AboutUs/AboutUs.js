@@ -1,42 +1,60 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import Image from "next/image";
 import Bg from "../../assets/about-us-bg.svg";
-import Link from "next/link"
-import {about_us_data} from "../../utils/pagesData/about_us_data";
-
+import Link from "next/link";
+import { about_us_data } from "../../utils/pagesData/about_us_data";
 
 const AboutUs = () => {
-	return <Wrapper id={"about-us"} name={"about-us"}>
-		<div className="container">
-			<div className="background_img">
-				<Image src={Bg} layout={"fill"} objectFit={"contain"}/>
-			</div>
-			<div className="about_header">
-				<h1 className="title">about us</h1>
-			</div>
-			<AboutUsContent>
-				<div className="text_wrap">
+  return (
+    <Wrapper id={"about-us"} name={"about-us"}>
+      <div className="container">
+        <div className="background_img">
+          <Image
+            src={Bg}
+            layout={"fill"}
+            objectFit={"contain"}
+            alt=""
+            priority={true}
+          />
+        </div>
+        <div className="about_header">
+          <h1 className="title">about us</h1>
+        </div>
+        <AboutUsContent>
+          <div className="text_wrap">
+            <div className="text">
+              <p>
+                TazaCode develops software, web and mobile applications, cloud
+                systems, trade automation and business processes. We offer a
+                full range of services for the creation of web solutions and
+                mobile solutions, from design to delivery, industrial servers
+                and support. <br /> <br /> Programming languages, used on the
+                server-side, include ​​Python, PHP, JavaScript PostgreSQL and
+                MySQL databases. <br /> <br /> On the client-side, programming
+                languages include JavaScript and ReactJS libraries. <br />{" "}
+                <br /> For the operating system we use Android Kotlin, Java,
+                Flutter, and for iOS we use the Swift operating system. <br />{" "}
+                <br /> We employ a top-down analytical approach to each project
+                with a strong team of over thirty developers encompassing a
+                broad spectrum of experience in commercial development. <br />{" "}
+                <br /> These are some of our resources for any complex task.
+              </p>
+            </div>
+          </div>
 
-					<div className="text">
+          {/*<div className="button">*/}
+          {/*	<Link href={"/about-us"}>*/}
+          {/*		<button>read more</button>*/}
+          {/*	</Link>*/}
 
-							{
-							about_us_data.text
-						}
-					</div>
-				</div>
+          {/*</div>*/}
+        </AboutUsContent>
+      </div>
+    </Wrapper>
+  );
+};
 
-				{/*<div className="button">*/}
-				{/*	<Link href={"/about-us"}>*/}
-				{/*		<button>read more</button>*/}
-				{/*	</Link>*/}
-
-				{/*</div>*/}
-			</AboutUsContent>
-		</div>
-	</Wrapper>
-}
-
-export default AboutUs
+export default AboutUs;
 
 const Wrapper = styled.div`
   padding: 32px 0 109px;
@@ -67,11 +85,11 @@ const Wrapper = styled.div`
     font-weight: 600;
     font-size: 36px;
     line-height: 44px;
-    color: #FFFFFF;
+    color: #ffffff;
     position: relative;
     z-index: 20;
     text-transform: uppercase;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
     @media (max-width: 768px) {
       font-size: 32px;
     }
@@ -98,16 +116,14 @@ const Wrapper = styled.div`
         font-size: 42px;
         left: -30%;
       }
-
     }
-
   }
-`
+`;
 
 const AboutUsContent = styled.div`
   width: 80%;
   margin: 0 auto;
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     width: 95%;
   }
   .text_wrap {
@@ -115,7 +131,7 @@ const AboutUsContent = styled.div`
     //justify-content: space-between;
     //align-items: center;
     //justify-content: center;
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -127,17 +143,13 @@ const AboutUsContent = styled.div`
     font-weight: 600;
     font-size: 19px;
     line-height: 32px;
-    text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0 auto;
     margin-bottom: 27px;
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
       width: 90%;
       font-size: 15px;
-     
     }
-
-
   }
 
   .button {
@@ -148,12 +160,12 @@ const AboutUsContent = styled.div`
 
       font-weight: 600;
       padding: 10px;
-      border: 2px solid #FFFFFF;
+      border: 2px solid #ffffff;
       outline: none;
       font-size: 18px;
       line-height: 22px;
       text-align: center;
-      color: #FFFFFF;
+      color: #ffffff;
       background: transparent;
       transition: all 0.3s ease;
       text-transform: uppercase;
@@ -161,8 +173,7 @@ const AboutUsContent = styled.div`
       :hover {
         background: #fff;
         color: #000;
-
       }
     }
   }
-`
+`;

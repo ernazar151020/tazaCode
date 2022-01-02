@@ -1,55 +1,58 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import Image from "next/image";
 import Bg from "../../assets/home-page-bg.svg";
-import uygo from "../../assets/uygo-logo.svg"
-import ime from "../../assets/ime.svg"
-import medbase from "../../assets/medbase.png"
-import mer from "../../assets/mer.svg"
-import Link from "next/link"
-
+import uygo from "../../assets/uygo-logo.svg";
+import ime from "../../assets/ime.svg";
+import medbase from "../../assets/medbase.png";
+import mer from "../../assets/mer.svg";
+import Link from "next/link";
 
 const MainPage = () => {
-	return <Wrapper id={"home"} name={"home"}>
-		<Image src={Bg} layout={"fill"} className="background" objectFit={"cover"} objectPosition={"center"}/>
-		<div className="container">
-			<MainPageContent>
-				<div>
+  return (
+    <Wrapper id={"home"} name={"home"}>
+      <Image
+        src={Bg}
+        layout={"fill"}
+        className="background"
+        objectFit={"cover"}
+        objectPosition={"center"}
+        alt=""
+        priority={true}
+      />
+      <div className="container">
+        <MainPageContent>
+          <div>
+            <div className="title">we enjoyed to collaborate with</div>
+            <div className="projects">
+              {/*<Link href={"/projects"}>*/}
+              <div className="icon">
+                <Image src={uygo} alt="" priority={true} />
+              </div>
+              {/*</Link>*/}
+              {/*<Link href={"/projects"}>*/}
+              <div className="icon">
+                <Image src={ime} alt="" priority={true} />
+              </div>
+              {/*</Link>*/}
+              {/*<Link href={"/projects"}>*/}
+              <div className="icon">
+                <Image src={mer} alt="" priority={true} />
+              </div>
+              {/*</Link>*/}
+              {/*<Link href={"/projects"}>*/}
+              <div className="icon">
+                <Image src={medbase} alt="" priority={true} />
+              </div>
+              {/*</Link>*/}
+            </div>
+          </div>
+        </MainPageContent>
+      </div>
+    </Wrapper>
+  );
+};
 
-					<div className="title">
-						we enjoyed
-						to collaborate with
-					</div>
-					<div className="projects">
-						{/*<Link href={"/projects"}>*/}
-							<div className="icon">
-								<Image src={uygo}/>
-							</div>
-						{/*</Link>*/}
-						{/*<Link href={"/projects"}>*/}
-							<div className="icon">
-								<Image src={ime}/>
-							</div>
-						{/*</Link>*/}
-						{/*<Link href={"/projects"}>*/}
-							<div className="icon">
-								<Image src={mer}/>
-							</div>
-						{/*</Link>*/}
-						{/*<Link href={"/projects"}>*/}
-							<div className="icon">
-								<Image src={medbase}/>
-							</div>
-						{/*</Link>*/}
-
-					</div>
-				</div>
-
-			</MainPageContent>
-		</div>
-	</Wrapper>
-}
-
-export default MainPage
+export default MainPage;
 
 const Wrapper = styled.div`
   position: relative;
@@ -62,14 +65,13 @@ const Wrapper = styled.div`
     transform: translateY(0px);
   }
 
-
   .background {
     height: 100%;
 
     img {
     }
   }
-`
+`;
 
 const MainPageContent = styled.div`
   z-index: 20;
@@ -81,12 +83,9 @@ const MainPageContent = styled.div`
   @media (max-width: 768px) {
     padding-top: 50px;
     transform: translate(0);
-
   }
 
-
   .title {
-
     margin-top: 30px;
     font-weight: 600;
     font-size: 48px;
@@ -96,7 +95,7 @@ const MainPageContent = styled.div`
     margin-bottom: 70px;
     width: 50%;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
-    0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+      0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
     @media (max-width: 768px) {
       width: 90%;
       font-size: 38px;
@@ -111,7 +110,6 @@ const MainPageContent = styled.div`
     //    0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
     //  }
     //}
-
   }
 
   .projects {
@@ -124,7 +122,7 @@ const MainPageContent = styled.div`
       margin-right: 50px;
       transition: all 0.3s linear;
       cursor: pointer;
-      :hover{
+      :hover {
         transform: scale(1.1);
         transition: all 0.3s linear;
       }
@@ -142,9 +140,7 @@ const MainPageContent = styled.div`
       }
 
       img {
-
       }
-
     }
   }
-`
+`;
