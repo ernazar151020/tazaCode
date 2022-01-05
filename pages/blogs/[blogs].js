@@ -13,7 +13,7 @@ const NewsDetail = () => {
   const { query } = useRouter();
 
   useEffect(() => {
-    const findById = newsData.find((item) => item.id === Number(query.newsId));
+    const findById = newsData.find((item) => item.id === Number(query.blogs));
 
     setNewsDetail({ ...findById });
   }, []);
@@ -28,7 +28,7 @@ const NewsDetail = () => {
           <div className="container">
             <div className="header">
               <div className="titles">
-                <h3 className="title">/technews/</h3>
+                <h3 className="title">/techblogs/</h3>
                 <h1 className="subtitle">{newsDetail?.title}</h1>
               </div>
             </div>

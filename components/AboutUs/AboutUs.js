@@ -61,7 +61,7 @@ const Wrapper = styled.div`
   background: #000;
   position: relative;
   z-index: 20;
-
+  font-weight: 400;
   .background_img {
     position: absolute;
     inset: 0;
@@ -140,7 +140,7 @@ const AboutUsContent = styled.div`
 
   .text {
     //width: 50%;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 19px;
     line-height: 32px;
     color: #ffffff;

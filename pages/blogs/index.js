@@ -13,7 +13,7 @@ import { useRouter } from "next/router";
 const News = () => {
   const router = useRouter();
   const handlePushToNewsDetail = (id) => {
-    router.push(`/news/${id}`);
+    router.push(`/blogs/${id}`);
   };
 
   return (
@@ -22,8 +22,8 @@ const News = () => {
         <div className="container">
           <div className="news_header">
             <div className="titles">
-              <h3 className="title">/technews/</h3>
-              <h1 className="subtitle">our latest news</h1>
+              <h3 className="title">/techblogs/</h3>
+              <h1 className="subtitle">our latest blogs</h1>
             </div>
           </div>
           <NewsContent>
@@ -49,7 +49,7 @@ const News = () => {
                     <div className="date_and_author">
                       {/*<span>{item.date}</span> */}
                       by
-                      <span>{item.author}</span>
+                      <span> {item.author}</span>
                     </div>
                     <div className="title">
                       <div>{item.title}</div>
@@ -102,7 +102,7 @@ const Wrapper = styled.div`
     text-transform: uppercase;
 
     :before {
-      content: "our latest news";
+      content: "our latest blogs";
       position: absolute;
       font-weight: 600;
       font-size: 72px;

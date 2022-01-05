@@ -21,15 +21,15 @@ export const newsData = [
       " \n" +
       "Business software helps to run businesses smoothly and efficiently. Finding appropriate programming companies and generic software applications is an important precursor, whilst getting a tailor-made service for your business software needs, is something that comes with growing business maturity and capital investment.  \n",
   },
-  {
-    image: news2,
-    category: "development",
-    date: "december, 2021",
-    author: "Admir Kurman ",
-    title: "Why TAZA CODE?\n",
-    id: 2,
-    text:
-      "TAZA means transparent from the Kyrgyz language. We believe that transparency leads to excellent communications and better  relations with our customers. Following this belief, we are totally focussed on your business effectiveness, increasing your profits through the technologies we can upbuild and embed in your company operations. Software development includes mobile, web applications and a smooth transition from old to new. \n" +
-      "TAZA CODE is ready to customise full-cycle software development and meet business specific requirements, bringing the customer a bespoke product, with specifications to meet a range of budgets.  \n",
-  },
+  // {
+  //   image: news2,
+  //   category: "development",
+  //   date: "december, 2021",
+  //   author: "Admir Kurman ",
+  //   title: "Why TAZA CODE?\n",
+  //   id: 2,
+  //   text:
+  //     "TAZA means transparent in the Kyrgyz language. We believe that transparency leads to excellent communications and better  relations with our customers. Following this belief, we are totally focussed on your business effectiveness, increasing your profits through the technologies we can upbuild and embed in your company operations. Software development includes mobile, web applications and a smooth transition from old to new. \n" +
+  //     "TAZA CODE is ready to customise full-cycle software development and meet business specific requirements, bringing the customer a bespoke product, with specifications to meet a range of budgets.  \n",
+  // },
 ];

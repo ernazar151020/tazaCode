@@ -43,6 +43,19 @@ const AboutUs = () => {
                 <br /> These are some of our resources for any complex task.
               </p>
             </p>
+            <h1 className="title">Why TAZA CODE? </h1>
+            <p className="text">
+              TAZA means transparent in the Kyrgyz language. We believe that
+              transparency leads to excellent communications and better
+              relations with our customers. Following this belief, we are
+              totally focussed on your business effectiveness, increasing your
+              profits through the technologies we can upbuild and embed in your
+              company operations. Software development includes mobile, web
+              applications and a smooth transition from old to new. TAZA CODE is
+              ready to customise full-cycle software development and meet
+              business specific requirements, bringing the customer a bespoke
+              product, with specifications to meet a range of budgets.{" "}
+            </p>
           </div>
         </AboutUsContent>
         {/*<AboutMembers>*/}
@@ -107,6 +120,8 @@ const AboutUsContent = styled.div`
     z-index: 20;
     text-transform: uppercase;
     margin-bottom: 25px;
+    text-align: center;
+    margin-top: 20px;
 
     :before {
       content: "about us";

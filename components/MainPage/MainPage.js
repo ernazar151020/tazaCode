@@ -22,7 +22,7 @@ const MainPage = () => {
       <div className="container">
         <MainPageContent>
           <div>
-            <div className="title">we enjoyed to collaborate with</div>
+            <div className="title">Bespoke solutions provided for</div>
             <div className="projects">
               {/*<Link href={"/projects"}>*/}
               <div className="icon">
@@ -94,8 +94,8 @@ const MainPageContent = styled.div`
     text-transform: uppercase;
     margin-bottom: 70px;
     width: 50%;
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
-      0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #228dff,
+      0 0 70px #000, 0 0 80px #000, 0 0 100px #000, 0 0 150px #228dff;
     @media (max-width: 768px) {
       width: 90%;
       font-size: 38px;
