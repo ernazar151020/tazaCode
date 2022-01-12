@@ -32,7 +32,7 @@ const social_media_data = [
     ),
   },
   {
-    phone_link: "https://wa.me/+996997948888",
+    phone_link: "tg://resolve?domain=tazacode",
     icon: (
       <svg
         width="38"
@@ -62,7 +62,7 @@ const social_media_data = [
   // }
   // ,
   {
-    phone_link: "tg://resolve?domain=tazacode",
+    phone_link: " https://wa.me/+996997948888",
     icon: (
       <svg
         width="26"

@@ -52,12 +52,12 @@ const Wrapper = styled.div`
     background: #000;
     color: red;
     transform: translateX(100%);
-    transition: all 0.5s linear;
+    //transition: all 0.3s ease;
   }
 
   .is-open {
     transform: translateX(0);
-    transition: all 0.5s linear;
+    //transition: all 0.3s ease;
   }
 
   ul {

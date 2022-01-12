@@ -45,7 +45,7 @@ export const teamsData = [
     },
   },
   {
-    name: "Meerim ",
+    name: "Meerim Aitkeeva ",
     image: meerim,
     dev_type: "UI/UX DESIGNER",
     level: "Junior",

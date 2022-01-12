@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { useState } from "react";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 // import axios from "axios";
+const MySwal = withReactContent(Swal)
 
 const FooterForm = () => {
   const [inputText, setInputText] = useState({
@@ -15,6 +18,22 @@ const FooterForm = () => {
     message: "",
   });
 
+  const sweetAlert = ()=>{
+    MySwal.fire({
+      title: <p>Hello World</p>,
+      footer: 'Copyright 2018',
+      icon: 'success',
+      didOpen: () => {
+        // `MySwal` is a subclass of `Swal`
+        //   with all the same instance & static methods
+        MySwal.clickConfirm()
+      }
+    }).then(() => {
+      return MySwal.fire(<p>Your message successfully sended</p>)
+    })
+  }
+
+
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -26,7 +45,10 @@ const FooterForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+const token = "5084020672:AAHybT0oNn9A1meuG3tWFbsO6yqNvTSS3Hc"
+  const chat_id = -650250805
+
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (!inputText.name || !inputText.email) {
       let errors = {};
@@ -34,30 +56,37 @@ const FooterForm = () => {
       !inputText.email && (error.email = "Обязательное поле");
       setError((old) => ({ ...old, ...errors }));
     } else {
-      setInputText({
-        name: "",
-        email: "",
-        message: "",
-      });
+      try{
+        const data = {
+          name: inputText.name,
+          email: inputText.email,
+          message: inputText.message
+        }
+        const dataText = `Name:${inputText.name} %0A Email: ${inputText.email} %0A Message: ${inputText.message}`
+        const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${dataText}`
+
+        await fetch(url, {
+          method: 'post',
+          body: JSON.stringify(data),
+        });
+        sweetAlert()
+        setInputText({
+          name:"",
+          email:"",
+          message:""
+        })
+
+      }
+      catch(error){
+      console.log(error , "<=error")
+      }
     }
-    //
-    // axios.post('http://localhost:3000/api/email',{email:inputText.email})
-    // 	.then(
-    //
-    // 		(res)=>{
-    // 			alert('Send Mail To You')
-    // 			// setEmail('')
-    //
-    // 		}
-    //
-    // 	).catch(
-    // 	(e)=>console.log(e)
-    // )
   };
+
 
   return (
     <Wrapper>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} method={"post"}>
         <div className="form_group">
           <div className="input">
             <input
